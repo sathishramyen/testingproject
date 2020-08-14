@@ -15,7 +15,7 @@
     "build:umd:min": "cross-env BABEL_ENV=rollup NODE_ENV=production rollup -c",
     "build:flow": "flow-copy-source src lib && flow-copy-source src es",
     "build": "npm run clean && npm run build:cjs && npm run build:es && npm run build:flow && npm run build:umd && npm run build:umd:min",
-    "predeploy":"npm rub build",
+    "predeploy":"npm run build",
     "deploy": "gh-pages -d build",
     "jest": "cross-env BABEL_ENV=development NODE_ENV=test jest",
     "jest:watch": "cross-env BABEL_ENV=development NODE_ENV=test jest --watch",
